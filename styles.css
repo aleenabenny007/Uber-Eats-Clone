@@ -262,44 +262,43 @@ header .header-division{
     font-weight: 500;
 }
 
-.details img{
-    width: 100%;
-    /* height: auto; */
+.my-map{
+    min-width: 944px;
+    height: 360px;
+    background-image: url("assets/images/uber_map.png");
+    background-position: center;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    margin-top: 23px;
+    overflow: hidden;
 }
 
 .details .list{
     margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    min-width: 860px;
+    max-width: 1548px;
+    /* background-color: #5c5b5b; */
+    overflow: hidden;
 }
 
 .details .list ul{
     display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    column-gap: 17.5%;
+    flex-flow: column;
     row-gap: 24px;
-    max-width: 86%;
-    justify-content: space-between;
+    /* max-width: 86%; */
 }
 
 .details .list ul li{
-    /* background-color: #5c5b5b; */
-    flex:1 1 150px;
-}
-
-.my-map{
-    width: 1265;
-    height: 360;
-    /* background-image: url("assets/images/uber_map.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
-    background-color: #fff;
+    width: 150px;
 }
 
 .spacer{
     height: 80px;
 }
 
+/* footer start  */
 footer{
     margin-top: 80px;
     padding-top: 72px;
@@ -315,12 +314,84 @@ footer>div{
     box-sizing: border-box;
 }
 
+.footer-sections{
+    display: flex;
+    column-gap: 315px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.footer-section.right{
+    display: flex;
+    flex-flow: row;
+    /* column-gap: 106px; */
+    justify-content: space-between;
+    /* background-color: #5c5b5b; */
+    width: 37.7%;
+}
+
+.footer-section.right ul li{
+    padding-bottom: 16px;
+}
+
 .footer-buttons{
     display: flex;
     column-gap: 16px;
     position: relative;
     top: 190px;
 }
+
+.lang{
+    display: flex;
+    column-gap: 4.3px;
+    align-items: center;
+}
+
+.lang *{
+    display: inline;
+}
+
+.lang-img{
+    height: 16px;
+    width: 16px;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.footer-bottom div{
+    display: flex;
+    flex-flow: column;
+    row-gap: 16px;
+    align-items: flex-end;
+}
+
+.footer-bottom div ul{
+    display: flex;
+    column-gap: 40px;
+}
+
+.footer-bottom .first ul{
+    column-gap: 24px;
+}
+
+.footer-bottom li{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.footer-bottom .first ul li img{
+    height: 16px;
+    width: auto;
+    width: 16px;
+}
+/* footer end  */
+
+
 
 
 
@@ -329,6 +400,7 @@ footer>div{
 /* responsive design  */
 
 /* medium screen  */
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1132px) {
+
     
 }
