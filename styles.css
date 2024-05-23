@@ -63,7 +63,7 @@ header{
     max-width: 95.85%;
     z-index: 10;
     position: sticky;
-    top: -2px;
+    top: 0px;
     /* background-color: #ffffff; */
 }
 
@@ -276,10 +276,9 @@ header .header-division{
 .details .list{
     margin-top: 24px;
     display: flex;
+    gap: 24px;
     justify-content: space-between;
-    min-width: 860px;
-    max-width: 1548px;
-    /* background-color: #5c5b5b; */
+    min-width: 944px;
     overflow: hidden;
 }
 
@@ -287,11 +286,8 @@ header .header-division{
     display: flex;
     flex-flow: column;
     row-gap: 24px;
-    /* max-width: 86%; */
-}
-
-.details .list ul li{
-    width: 150px;
+    min-width: 218px;
+    width: 100%;
 }
 
 .spacer{
@@ -316,29 +312,46 @@ footer>div{
 
 .footer-sections{
     display: flex;
-    column-gap: 315px;
-    padding-bottom: 24px;
+    flex-flow: row;
+    padding-bottom: 40px;
     border-bottom: 1px solid #f3f3f3;
 }
 
-.footer-section.right{
+.footer-section-left{
     display: flex;
-    flex-flow: row;
-    /* column-gap: 106px; */
+    flex-flow: column;
     justify-content: space-between;
-    /* background-color: #5c5b5b; */
-    width: 37.7%;
+    min-width: 472px;
+    width: 100%;
+    max-width: 600px;
+    padding-bottom: 4px;
 }
 
-.footer-section.right ul li{
+.footer-section-right{
+    width: 100%;
+    min-width: 472px;
+    max-width: 600px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.footer-section-right ul{
+    min-width: 236px;
+    width: 100%;
+}
+
+.footer-section-right ul li{
     padding-bottom: 16px;
+}
+
+.footer-section-right ul .lang{
+    padding-bottom: 0;
 }
 
 .footer-buttons{
     display: flex;
     column-gap: 16px;
-    position: relative;
-    top: 190px;
 }
 
 .lang{
@@ -390,17 +403,3 @@ footer>div{
     width: 16px;
 }
 /* footer end  */
-
-
-
-
-
-
-
-/* responsive design  */
-
-/* medium screen  */
-@media screen and (max-width:1132px) {
-
-    
-}
