@@ -58,13 +58,15 @@ header{
     display:flex;
     flex-flow: row;
     justify-content: space-between;
-    padding: 14px 40px;
+    padding: 14px 40px 15px;
     min-width: 944px;
     max-width: 95.85%;
     z-index: 10;
-    position: sticky;
+    position: absolute;
     top: 0px;
-    /* background-color: #ffffff; */
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
 }
 
 header .header-division{
@@ -109,24 +111,20 @@ header .header-division{
     background-position: center;
     width: 100%;
     height: 100vh;
-    position: relative;
-    top: -64.7px;
-    left: 0;
+    /* position: relative; */
+    /* left: 0; */
     display: flex;
     align-items: center;
 }
 
 .banner-content{
-    /* position: absolute;
-    top: 355.8px;
-    left: 0; */
     display: flex;
     flex-flow: column;
     justify-content: center;
     height: 250px;
     min-width: 1024px;
     padding: 0 40px;
-    margin-top: 2px;
+    /* margin-top: 2px; */
 }
 
 .banner-title{
@@ -144,7 +142,7 @@ header .header-division{
     flex-flow: row;
     column-gap: 8px;
     align-items: center;
-    margin-top: 40.5px;
+    margin-top: 39px;
     margin-bottom: 24px;
 } 
 
@@ -189,7 +187,7 @@ header .header-division{
     background-color: #000000;
     color: #ffffff;
     width: fit-content;
-    padding: 15px 16.3px;
+    padding: 17px 16.3px 13px;
     border-radius: 8px;
 }
 
@@ -403,3 +401,6 @@ footer>div{
     width: 16px;
 }
 /* footer end  */
+
+
+
