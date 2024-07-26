@@ -1,0 +1,749 @@
+/* reset default styles*/
+body,
+p,
+a,
+ul,
+li,
+h2,
+h1 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* base styles */
+body {
+  background: white;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Uber Move-bold";
+  src: url("assets/fonts/bold.woff2");
+}
+
+@font-face {
+  font-family: "Uber Move-medium";
+  src: url("assets/fonts/medium.woff2");
+}
+
+@font-face {
+  font-family: "Uber Move-regular";
+  src: url("assets/fonts/text.woff2");   
+}
+
+* {
+  font-family: "Uber Move-regular" !important;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+a {
+  font-family: "Uber Move-medium" !important;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: underline;
+}
+/* base styles end  */
+
+/* header starts  */
+header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 64px;
+  width: 100%;
+  /* min-width: 1024px; */
+  /* max-width: 1920px; */
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+header .header-division {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+header .menu-icon {
+  margin-left: -14px;
+  margin-right: 0px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+header .button {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px 0px,
+    rgba(0, 0, 0, 0.04) 0px 4px 4px 0px;
+}
+
+header .button.login {
+  margin-right: 16px;
+}
+
+header .button.icon {
+  display: none;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  place-items: center;
+  margin-right: 12px;
+}
+
+header .button.icon > img {
+  width: 16px;
+  height: 16px;
+}
+
+.header-division .logo-text {
+  height: 16px;
+  margin-left: 8px;
+  margin-right: 28px;
+}
+
+/* header ends  */
+
+/* banner starts  */
+.button {
+  font-family: "Uber Move-medium" !important;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 12px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  background-color: #ffffff;
+  height: 36px;
+}
+
+.button.signup {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.banner {
+  background-image: url("assets/images/banner.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.banner-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 250px;
+  padding: 0 40px;
+  width: 100%;
+  /* min-width: 1024px; */
+  /* max-width: 1920px;   */
+}
+
+.banner-title {
+  font-family: "Uber Move-bold" !important;
+  font-size: 52px;
+  line-height: 64px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  max-width: 60%;
+}
+
+.banner-divs {
+  display: flex;
+  flex-flow: row;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.banner-divs > div:not(:last-child) {
+  box-shadow: rgb(243, 243, 243) 0px -1px 0px inset;
+}
+
+.search-bar {
+  background-color: #ffffff;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  min-width: 500px;
+  padding: 8px 16px;
+}
+
+.search-bar > img {
+  padding: 8px 0;
+  width: 24px;
+  height: 40px;
+}
+
+.search-bar input {
+  font-family: "Uber Move-medium" !important;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #5c5b5b;
+  border-color: transparent;
+  flex: 1 1 0%;
+  padding: 0;
+  height: 40px;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.dropdown {
+  height: 56px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 4px;
+}
+
+.dropdown .dropdown-image {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+}
+
+.dropdown p {
+  font-family: "Uber Move-medium" !important;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  padding-right: 4px;
+}
+
+.dropdown .dropdown-icon {
+  justify-self: flex-end;
+  margin-left: auto;
+}
+
+.banner-button {
+  background-color: black;
+  color: #ffffff;
+  width: max-content;
+  min-height: 56px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: "Uber Move-medium" !important;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.signin-link,
+.signin-link * {
+  font-family: "Uber Move-medium" !important;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  margin-top: 24px;
+}
+/* banner ends  */
+
+.small-screen-active{
+    display: none;
+}     
+
+/* image content starts  */
+.image-section {
+  cursor: pointer;
+  padding-top: 64px;
+}
+
+.image-section > div {
+  display: flex;
+  flex-flow: row;
+  margin-top: 7px;
+}
+.section {
+  display: flex;
+  flex-flow: column;
+  width: 33.333%;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+.section * {
+  margin-top: 9px;
+}
+
+.section > h2 {
+  font-family: "Uber Move-bold" !important;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+.section > a {
+  margin-top: 8px;
+}
+/* image content ends  */
+
+/* cities near me  */
+.details {
+  padding: 0 40px;
+  min-width: 944px;
+}
+
+.details .heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.details .heading h1 {
+  font-family: "Uber Move-bold" !important;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 500;
+}
+
+.my-map {
+  min-width: 944px;
+  height: 360px;
+  background-image: url("assets/images/uber_map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 23px;
+  overflow: hidden;
+}
+
+.details .list {
+  margin-top: 24px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;  
+  min-width: 944px;
+  overflow: hidden;
+}
+
+.details .list ul {
+  display: flex;
+  flex-flow: column;
+  row-gap: 24px;
+  min-width: 218px;
+  width: 100%;
+}
+
+.spacer {
+  height: 80px;
+}
+
+/* footer start  */
+footer {
+  margin-top: 80px;
+  padding-top: 72px;
+  padding-bottom: 88px;
+  border-top: 1px solid #f3f3f3;
+}
+
+footer > div {
+  margin: 0 auto;
+  padding: 0 40px;
+  min-width: 1024px;
+  max-width: 1280px;
+  box-sizing: border-box;
+}
+
+.footer-sections {
+  display: flex;
+  flex-flow: row;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.footer-section-left {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  min-width: 472px;
+  width: 100%;
+  max-width: 600px;
+  padding-bottom: 4px;
+}
+
+.footer-section-right {
+  width: 100%;
+  min-width: 472px;
+  max-width: 600px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.footer-section-right ul {
+  min-width: 236px;
+  width: 100%;
+}
+
+.footer-section-right ul li {
+  padding-bottom: 16px;
+}
+
+.footer-section-right ul .lang {
+  padding-bottom: 0;
+}
+
+.footer-buttons {
+  display: flex;
+  column-gap: 16px;
+}
+
+.lang {
+  display: flex;
+  column-gap: 4.3px;
+  align-items: center;
+}
+
+.lang * {
+  display: inline;
+}
+
+.lang-img {
+  height: 16px;
+  width: 16px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.footer-bottom div {
+  display: flex;
+  flex-flow: column;
+  row-gap: 16px;
+  align-items: flex-end;
+}
+
+.footer-bottom div ul {
+  display: flex;
+  column-gap: 40px;
+}
+
+.footer-bottom .first ul {
+  column-gap: 24px;
+}
+
+.footer-bottom li {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.footer-bottom .first ul li img {
+  height: 16px;
+  width: auto;
+  width: 16px;
+}
+/* footer end  */
+
+/* ///////////////////////////////////////////// */
+/* Responsive Design starts here */
+
+@media screen and (max-width: 810px) {
+  header {
+    height: 48px;
+    padding: 0 16px;
+  }
+
+  header .header-division {
+    gap: 0;
+  }
+
+  header .menu-icon {
+    height: 36px;
+    width: 36px;
+    margin-right: 10px;
+    margin-left: -6px;
+  }
+
+  .header-division .logo-text {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  header .button.icon {
+    display: grid;
+  }
+
+  header .button.login {
+    display: none;
+  }
+
+  .banner {
+    background-image: url("https://www.ubereats.com/_static/d8ceaf24a3164759.webp");
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-content {
+    position: absolute;
+    top: 104px;
+    padding: 0 16px;
+    align-items: center;
+    height: fit-content;    
+  }
+
+  .banner-content .banner-title {   
+    text-align: left;
+    max-width: 100%;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 24px;     
+  }
+
+  .banner-content .banner-divs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .banner-content .banner-divs > *,
+  .signin-link {
+    max-width: 387.717px;
+    width: 100%;
+  }
+
+  .search-bar {
+    min-width: unset;
+    margin: 8px 0;
+    column-gap: 10px;
+  }
+
+  .search-bar input::placeholder {
+    color: rgb(75, 75, 75);
+    opacity: 1;
+    font-family: "Uber Move-regular";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .dropdown {
+    margin-bottom: 16px;
+  }
+
+  /* small screen special  */
+  .small-screen-active{
+    display: block;
+    padding: 48px 16px 0;
+  }
+
+  .small-screen-active > div{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .small-screen-active .logo {
+    width: 64px;
+    height: 64px;
+  }
+
+  .small-screen-active p {
+    font-family: 'Uber Move-bold' !important;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: normal;
+    font-weight: 500;
+  }
+
+  .small-screen-active .get-app-btn{
+    background-color: grey;
+    min-height: 56px;
+    color: black;
+    background: rgb(243, 243, 243);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: "Uber Move-medium" !important;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  .get-app-btn > img{
+    width: 18px;
+    height: 18px;
+  }
+
+  /* content  */
+
+  .image-section{
+    padding: 48px 16px;
+    padding-top: 41px;
+  }
+
+  .image-section > div {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .section, .section img{      
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .section > h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 8px;
+  }
+
+  .details, .details .list, .my-map{
+    min-width: unset;
+  }
+
+  .details{
+    padding: 0 16px;
+    padding-bottom: 46px;
+    position: relative;
+  }
+
+  .pc-a{
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .details .heading h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .my-map{
+    margin-top: 16px;
+  }
+
+  .details .list{
+    margin-top: 16px;
+    gap: 0;
+  }
+
+  .details .list ul{
+    min-width: 50%;
+  }
+
+  .details .list.two{
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  .details .list.two ul{
+    max-width: 50%;
+    margin-top: 16px;
+  }
+
+  .spacer{
+    height: 48px;
+  }
+
+  .spacer.hideable{
+    display: none;
+  }
+
+  /* footer  */
+  footer{
+    padding-bottom: 80px;
+    padding-top: 64px;
+    margin-top: 64px;
+  }
+
+  footer > div{
+    padding: 0 16px;
+  }
+
+  .footer-sections{
+    flex-direction: column;
+    padding-bottom: 16px;
+  }
+
+  .footer-section-left > div{
+    margin-bottom: 46px;
+  }
+
+  .footer-section-left{
+    padding: 0;
+  }
+
+  .footer-section-left > .footer-buttons{
+    margin-bottom: 68px;
+  }
+
+  .footer-section-right{
+    flex-wrap: wrap;  
+  }
+
+  .footer-section-right > ul{
+    min-width: 100%;
+    margin: 0;
+    margin-bottom: 48px;
+    padding: 0;
+  }
+
+  .footer-bottom{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  footer > div,.footer-section-left,.footer-section-right,.footer-section-right ul{
+    min-width: unset;
+  }
+
+  .footer-bottom .first{
+    margin-bottom: 44px;
+  }
+
+  .footer-bottom .first ul li{
+    display: grid;
+    place-items: center;
+  }
+
+  .footer-bottom .second{
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .footer-bottom .second > ul{
+    flex-direction: column;
+    gap: 16px;
+  }
+
+}
